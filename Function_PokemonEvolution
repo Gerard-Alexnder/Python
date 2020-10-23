@@ -1,0 +1,46 @@
+#For this function the only thing permited was if statements, but I wanted to go a little bit deeper
+#and used a while loop
+#
+#
+#Pokemon evolution skills
+#Here we are going to be working on Leveling up your starter pokemon
+
+def PokeEvolution(level, exp, pokemon):
+
+
+    fights = 0
+    evolution = False
+    print("Stats before fighting\n")
+    print("***********************************")
+    print("EXP =     ",   exp)
+    print("Level =   ", level)
+    print("Fight No. ",fights)
+    print("Chosen Pokemon  = ", pokemon,"\n")
+    print("*********Fighting Begins***********")
+
+    while evolution == False:
+
+
+
+        if  exp <= 100 and level !=16:
+            exp += 25
+            fights +=1
+            print("Fight No.       ",fights)
+            print("EXP =           ", exp)
+            print("Current Level = ", level)
+            print("**************************************************")
+        if exp >= 100:
+            level += 1
+            print("Level Up! Your pokemon has reached to level ",level)
+            exp = 0
+            print("**************************************************")
+            if level == 5:
+                print("Congratulations your {} has learned a new skill".format(pokemon))
+            if level == 8:
+                print("Congratulations your {} has learned a new skill".format(pokemon))
+        if level >= 16:
+            evolution = True
+            print("Congratulations your Pokemon has evolved into a Charmeleon")
+            print("Charmeleon has acquired a new skill ")
+
+PokeEvolution(15,0,'charmander')
